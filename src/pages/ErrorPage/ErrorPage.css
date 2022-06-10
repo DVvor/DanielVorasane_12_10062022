@@ -1,0 +1,39 @@
+.main-errorpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+.error-number {
+  font-size: 288px;
+  font-weight: 700;
+  line-height: 411px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #FF0101;
+  ;
+}
+
+.message-errorpage {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 51px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FF0101;
+  text-align: center;
+
+}
+
+
+/* .btn-return > .link-return-home {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  text-decoration-line: underline;
+  color: #FF0101;
+  text-align: center;
+
+} */
