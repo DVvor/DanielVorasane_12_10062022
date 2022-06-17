@@ -1,4 +1,5 @@
 .main {
   display: flex;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
+  flex: 1;
 }

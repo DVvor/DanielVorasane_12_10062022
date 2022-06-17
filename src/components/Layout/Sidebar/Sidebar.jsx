@@ -13,10 +13,13 @@ function Sidebar() {
   return (
 		<>
       <div className='sidebar'>
-        <img alt='item-sidebar-nav' className='item-sidebar-nav' src={strenght} />
-        <img alt='item-sidebar-nav' className='item-sidebar-nav' src={meditation} />
-        <img alt='item-sidebar-nav' className='item-sidebar-nav' src={swim} />
-        <img alt='item-sidebar-nav' className='item-sidebar-nav' src={cycle} />
+        <div className='sidebar-nav'>
+          <img alt='item-sidebar-nav' className='item-sidebar-nav' src={strenght} />
+          <img alt='item-sidebar-nav' className='item-sidebar-nav' src={meditation} />
+          <img alt='item-sidebar-nav' className='item-sidebar-nav' src={swim} />
+          <img alt='item-sidebar-nav' className='item-sidebar-nav' src={cycle} />
+        </div>
+        <p className='copyright'>Copiryght, SportSee 2020</p>
       </div>
     </>
 	)
