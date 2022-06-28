@@ -32,6 +32,10 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
+function getNumberDay(dayValue) {
+  return new Date(dayValue).getDate() //  - type date - To get day number
+}
+
 export default function dailyActivityChart({data}) {
 
   return (
@@ -52,7 +56,7 @@ export default function dailyActivityChart({data}) {
         >
           <CartesianGrid strokeDasharray="3 3" vertical= {false}/>
           <Area fill="#8884d8"/>
-          <XAxis dataKey="day" />
+          <XAxis dataKey="day" tickFormatter={getNumberDay} />
           <YAxis yAxisId="left" orientation='left' axisLine={false} tickLine={false} hide="false"  tickCount="3"/>
           <YAxis yAxisId="right" orientation='right' axisLine={false} tickLine={false} tickCount="3" domain={['auto', 'auto']}/>
           <Tooltip labelStyle={labelStyle} wrapperStyle={styleTooltip} content={<CustomTooltip />} />
