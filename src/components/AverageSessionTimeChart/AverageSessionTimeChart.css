@@ -1,0 +1,26 @@
+.sessionchart {
+  background-color: #FF0000;
+  width: 32%;
+  border-radius: 5px;
+  height: 350px;
+  position: relative;
+}
+
+.sessionchart-title {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  opacity: 50%;
+  height: 48px;
+  width: 147px;
+
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: white;
+
+  
+}

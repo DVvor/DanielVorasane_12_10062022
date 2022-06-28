@@ -271,4 +271,3 @@ module.exports = {
   USER_PERFORMANCE
 }
 
-console.log( USER_MAIN_DATA[0].id)
