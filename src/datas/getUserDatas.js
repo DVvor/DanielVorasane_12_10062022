@@ -30,7 +30,7 @@ async function getUserActivities() {
     console.log(error)
   })
   // console.log(data.data.sessions)
-  return (data).data.sessions
+  return (data.data.sessions)
 }
 
 //retrieves the average sessions of a user per day. The week starts on Monday.
@@ -59,8 +59,8 @@ async function getUserPerformance() {
   .catch(function (error) {
     console.log(error)
   })
-  console.log(data.data.data)
-  return (data.data.data)
+  // console.log(data.data)
+  return (data.data)
 }
 
 export { getUserInfos , getUserActivities, getUserAverageSessions, getUserPerformance} ;

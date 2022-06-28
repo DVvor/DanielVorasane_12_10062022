@@ -17,7 +17,7 @@ const styleTooltip = {
 }
 
 const CustomTooltip = ({ active, payload }) => {
-  console.log(payload)
+  // console.log(payload)
 if (active) {
   return (
     <div className="session-tooltip-container">
@@ -27,7 +27,21 @@ if (active) {
 }
 
 return null;
-};
+}
+
+function changeTickDay(tickIndex) {
+  const dayLetter = {
+     1: "L",
+     2: "M",
+     3: "M",
+     4: "J",
+     5: "V",
+     6: "S",
+     7: "D"
+  }
+  return dayLetter[tickIndex]
+ }
+ 
 
   export default function SessionChart({data}) {
   return (
@@ -50,17 +64,4 @@ return null;
       </ResponsiveContainer>
     </div>
   )
-}
-
-function changeTickDay(tickIndex) {
- const dayLetter = {
-    1: "L",
-    2: "M",
-    3: "M",
-    4: "J",
-    5: "V",
-    6: "S",
-    7: "D"
- }
- return dayLetter[tickIndex]
 }

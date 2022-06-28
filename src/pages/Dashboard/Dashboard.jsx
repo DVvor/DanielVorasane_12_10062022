@@ -43,7 +43,7 @@ function Dashboard() {
     fetchData()
   }, [])
 
-  // console.log(userInfos.userInfos.firstName)
+  // console.log(userPerformanceDatas)
   
 
     const username = userInfosDatas.userInfos?.firstName
