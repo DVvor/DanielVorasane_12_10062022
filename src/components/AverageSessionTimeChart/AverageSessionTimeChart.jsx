@@ -2,6 +2,32 @@ import React from 'react'
 import { LineChart,Line , XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import './AverageSessionTimeChart.css'
 
+const styleTooltip = {
+  borderRadius: 0,
+  backgroundColor: "#FFFFFF",
+  height: 25,
+  width: 39,
+  color: "black",
+  fontSize: 10,
+  fontWeight: 500,
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-around",
+  alignItems: "center",
+}
+
+const CustomTooltip = ({ active, payload }) => {
+  console.log(payload)
+if (active) {
+  return (
+    <div className="session-tooltip-container">
+              <p className="session-tooltip">{`${payload[0].value} min`}</p>
+        </div>
+  );
+}
+
+return null;
+};
 
   export default function SessionChart({data}) {
   return (
@@ -13,8 +39,8 @@ import './AverageSessionTimeChart.css'
       <CartesianGrid horizontalPoints={[0, 0]} verticalPoints={[0, 0]} />
       <XAxis dataKey="day" tickCount= "7" stroke='#FE7F7F' tickLine={false} axisLine={false} tickFormatter={changeTickDay} />
       <YAxis dataKey="sessionLength" type="number" domain={['dataMin - 40', 'dataMax + 100']}  axisLine={true} hide="true"/>
-      <Tooltip />
-      <Line type="monotone" name="minutes" dataKey="sessionLength" 
+      <Tooltip wrapperStyle={styleTooltip} content={<CustomTooltip />} />
+      <Line type="natural" name="minutes" dataKey="sessionLength" 
       strokeWidth={2} //thickness of curve
       activeDot={{ r: 8 }} // point cursor
       dot={{ r: 0 }} // intersection in line
