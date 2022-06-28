@@ -118,7 +118,7 @@ export default function PerformanceRadarChart({datas}) {
               // data={ USER_PERFORMANCE[0].data}
       
               >
-              <PolarGrid stroke="white" strokeLinejoin='inner'/>
+              <PolarGrid stroke="white" strokeLinejoin='inner' radialLines={false} />
               <PolarAngleAxis style={{ fontSize: '0.833vw' }} stroke="white" dataKey="kind" tickLine={false} tickFormatter={changeTickName} dy={5} />
               <Radar name="user" dataKey="value" fill="#FF0101" fillOpacity={0.7} />
             </RadarChart>
