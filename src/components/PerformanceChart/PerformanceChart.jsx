@@ -109,7 +109,7 @@ export default function PerformanceRadarChart({datas}) {
     
         return (
           <div className='radar'>
-            <ResponsiveContainer width="100%" height={350}>
+            <ResponsiveContainer width="100%" height={300}>
             <RadarChart
               style={{ backgroundColor: "#282D30", borderRadius: 5 }}
               outerRadius={'70%'}

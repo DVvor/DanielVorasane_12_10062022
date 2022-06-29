@@ -47,7 +47,7 @@ function changeTickDay(tickIndex) {
   return (
     <div className='sessionchart'>
       <p className='sessionchart-title' >Durée moyenne des sessions</p>
-      <ResponsiveContainer width="100%" height={340}>
+      <ResponsiveContainer width="100%" height={300}>
       <LineChart width="100%" height={250} data={data}
         margin={{ top: 5, right: 30, left: 15, bottom: 5 }}>
       <CartesianGrid horizontalPoints={[0, 0]} verticalPoints={[0, 0]} />

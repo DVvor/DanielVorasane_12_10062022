@@ -37,7 +37,7 @@ function getNumberDay(dayValue) {
 }
 
 export default function dailyActivityChart({data}) {
-
+console.log(data)
   return (
     <div className='barchart'>
     <p className='barchart-title' >Activité quotidienne</p>
@@ -58,7 +58,7 @@ export default function dailyActivityChart({data}) {
           <Area fill="#8884d8"/>
           <XAxis dataKey="day" tickFormatter={getNumberDay} dy={10}/>
           <YAxis yAxisId="left" orientation='left' axisLine={false} tickLine={false} hide="false"  tickCount="3"/>
-          <YAxis yAxisId="right" orientation='right' axisLine={false} tickLine={false} tickCount="3" domain={['auto', 'auto']}/>
+          <YAxis yAxisId="right" orientation='right' axisLine={false} tickLine={false} tickCount="3" type="number" domain={['dataMin -2' , 'dataMax +1']}/>
           <Tooltip labelStyle={labelStyle} wrapperStyle={styleTooltip} content={<CustomTooltip />} />
           <Legend verticalAlign="top" align="right" height={36} iconType="circle" iconSize="10"/>
           <Bar yAxisId="right" dataKey="kilogram" name="Poids (kg)" fill="#282D30" radius={[4, 4, 0, 0]}/>

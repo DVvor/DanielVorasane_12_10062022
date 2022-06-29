@@ -1,7 +1,48 @@
 .scorechart {
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   width: 31%;
+  position: relative;
 }
 
+.score {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  height: 63%;
+  width: 52%;
+  border-radius: 100%;
+  text-align: center;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
+.score-pourcent {
+  margin: 0;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 26px;
+}
+
+.score-content {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 500;
+  margin: 12px;
+  color: grey;
+}
+
+.scorechart-title {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+
+}

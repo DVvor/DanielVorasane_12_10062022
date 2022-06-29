@@ -17,7 +17,6 @@ async function getUserInfos() {
       // console.log(data.data)
   return (data.data)
 }
-
 // Get user Actvities (Kilograms and calories lost per day)
 async function getUserActivities() {
   const data = await fetch(`http://localhost:3000/user/${userId}/activity`)
