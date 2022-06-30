@@ -1,85 +1,64 @@
-![logo-du-projet](https://raw.githubusercontent.com/DVvor/DanielVorasane_12_10062022/blob/master/src/Assets/logo.png)
+![logo-du-projet](https://github.com/DVvor/DanielVorasane_12_10062022/blob/master/src/assets/logo.png)
 
+Sportsee is an application which allowing to track your workout activities.
 
-L’ensemble de ta documentation doit être réalisée en anglais.
-Le fichier README ne doit comporter que les étapes d’installation ainsi que les prérequis du projet. Dans ce fichier, tu devras dire comment installer et lancer le projet.
-Ton projet va utiliser React et tu vas forcément créer des components. Il est donc important que tu intègres des Proptypes pour chacun de tes components. 
-Dernier point, la JsDoc. En dehors des méthodes de cycle de vie (componentDidMount par exemple), il est important que ton projet ait des fonctions et méthodes documentées. 
-
-Etape d'installation
-
-Prerequisites
-Installation
-Configuration
-Documents
 # Project Sportsee
-Built a React project with external datas from API 
-# Getting Started with Create React App
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Built a React project with external datas from a API 
 
-## Available Scripts
+### Technologies and Dependencies
+-   Javascript
+-   CSS
+-   [Npm](https://www.npmjs.com/package/npm) (v8.1.0) 
+-   [NodeJS](https://nodejs.org/en/) (v2.0.4)
+-   [React](https://fr.reactjs.org/) (v18.1.0)
+-   [Create React App](https://github.com/facebook/create-react-app)
+-   [React-router-dom](https://reactrouter.com/) (v6.3.0)
+-   [Recharts](https://recharts.org/en-US/) (v2.1.10)
+-   [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Ressources and Documents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Figma](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1)
+- [Notion](https://www.notion.so/openclassrooms/Copy-of-Dev4U-projet-Learn-Home-6686aa4b5f44417881a4884c9af5669e)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+# Guide installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Install Back
+- First, follow the instructions to install the backend API on [P12-backendAPI](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Inside this back-end repository, install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`npm install`
 
-### `npm run eject`
+With the terminal, Launch back-end on port 3000 (default port):
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`npm run dev`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Install Front
+- And second time, clone the repository of SportSee Front-End on [P12-frontend](https://github.com/DVvor/DanielVorasane_12_10062022.git)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Inside this Front-End repository, install dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`npm install`
 
-## Learn More
+With the terminal, launch Front-End on port 3001:
+(let the launch backend on port 3000 and launch frontend on other port)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`npm start`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Front-End is now rendered at URL `http://localhost:3001`
 
-### Code Splitting
+We have 2 users available. You can change the user on url or use this different link:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`http://localhost:3003/user/12` 
+or
+`http://localhost:3003/user/18`
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Author
+Daniel VORASANE
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
