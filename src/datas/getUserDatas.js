@@ -1,10 +1,9 @@
-const userId = 12
 
 // Get user Informations includes: 
 // the user id, 
 // user information (first name, last name and age), 
 // the current day's score (todayScore) and key data (calorie, macronutrient, etc.)
-async function getUserInfos() {
+async function getUserInfos(userId) {
   const data = await fetch(`http://localhost:3000/user/${userId}`)
     .then(function (result) {
       if (result.ok) {
@@ -18,7 +17,7 @@ async function getUserInfos() {
   return (data.data)
 }
 // Get user Actvities (Kilograms and calories lost per day)
-async function getUserActivities() {
+async function getUserActivities(userId) {
   const data = await fetch(`http://localhost:3000/user/${userId}/activity`)
   .then(function (result) {
     if (result.ok) {
@@ -33,7 +32,7 @@ async function getUserActivities() {
 }
 
 //retrieves the average sessions of a user per day. The week starts on Monday.
-async function getUserAverageSessions() {
+async function getUserAverageSessions(userId) {
   const data = await fetch(`http://localhost:3000/user/${userId}/average-sessions`)
   .then(function (result) {
     if (result.ok) {
@@ -48,7 +47,7 @@ async function getUserAverageSessions() {
 }
 
 // Retrieves a user's performance (energy, endurance, etc.)
-async function getUserPerformance() {
+async function getUserPerformance(userId) {
   const data = await fetch(`http://localhost:3000/user/${userId}/performance`)
   .then(function (result) {
     if (result.ok) {

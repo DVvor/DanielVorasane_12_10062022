@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { useParams } from "react-router-dom";
 import './Dashboard.css'
 
 //assets
@@ -9,39 +10,42 @@ import './Dashboard.css'
 // import CalorieIcon from '../../assets/calories-icon.svg'
 
 //Components
-import Card from '../../components/Card-info/Card'
+import Card from '../../Components/Card-info/Card'
 // import data from '../../datas/data'
-import DailyActivityChart from '../../components/DailyActivityChart/DailyActivityChart.jsx'
-import AverageSessionTimeChart from '../../components/AverageSessionTimeChart/AverageSessionTimeChart'
-import PerformanceRadarChart from '../../components/PerformanceChart/PerformanceChart'
-import ScoreChart from '../../components/ScoreChart/ScoreChart'
+import DailyActivityChart from '../../Components/Charts/DailyActivityChart/DailyActivityChart.jsx'
+import AverageSessionTimeChart from '../../Components/Charts/AverageSessionTimeChart/AverageSessionTimeChart'
+import PerformanceRadarChart from '../../Components/Charts/PerformanceChart/PerformanceChart'
+import ScoreChart from '../../Components/Charts/ScoreChart/ScoreChart'
 
 
-import { getUserInfos, getUserActivities, getUserAverageSessions, getUserPerformance } from "../../datas/getUserDatas"
+import { getUserInfos, getUserActivities, getUserAverageSessions, getUserPerformance } from "../../Datas/getUserDatas"
+
 
 function Dashboard() {
+  const { id } = useParams(); // get current page ID
+
   const [userInfosDatas, setUserInfosDatas] = useState([])
   const [userActivitiesDatas, setUserActivitiesDatas] = useState({});
   const [userSessionsDatas, setUserSessionsDatas] = useState();
   const [userPerformanceDatas, setUserPerformanceDatas] = useState([]);
     
-  async function fetchData() {
-    const userInfosResult = await getUserInfos()
+  async function fetchData(userId) {
+    const userInfosResult = await getUserInfos(userId)
     setUserInfosDatas(userInfosResult)
 
-    const userActivitiesResult = await getUserActivities()
+    const userActivitiesResult = await getUserActivities(userId)
     setUserActivitiesDatas(userActivitiesResult)
 
-    const userSessionsResult = await getUserAverageSessions()
+    const userSessionsResult = await getUserAverageSessions(userId)
     setUserSessionsDatas(userSessionsResult)
 
-    const userPerformanceResult = await getUserPerformance()
+    const userPerformanceResult = await getUserPerformance(userId)
     setUserPerformanceDatas(userPerformanceResult)
   }
 
   useEffect(() => {
-    fetchData()
-  }, [])
+    fetchData(id)
+  }, [id])
 
   // console.log(userInfosDatas)
   
@@ -64,10 +68,10 @@ function Dashboard() {
             <ScoreChart data={userInfosDatas}/>
         </div>
         <div className='section-card'>
-          <Card type="Calories"/>
-          <Card type="Proteines"/>
-          <Card type="Glucides"/>
-          <Card type="Lipides"/>
+          <Card type="Calories"  data={userInfosDatas.keyData}/>
+          <Card type="Proteines" data={userInfosDatas.keyData}/>
+          <Card type="Glucides" data={userInfosDatas.keyData}/>
+          <Card type="Lipides" data={userInfosDatas.keyData}/>
         </div>
       </div>
     </div>

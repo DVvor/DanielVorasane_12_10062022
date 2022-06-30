@@ -4,7 +4,7 @@ import './ScoreChart.css'
 
 
 export default function ScoreChart({data}) {
-    console.log(data)
+    // console.log(data)
       const Kpi = data.todayScore * 100  || data.score * 100
 
       const dataChart = [

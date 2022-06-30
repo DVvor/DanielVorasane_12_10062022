@@ -37,7 +37,7 @@ function getNumberDay(dayValue) {
 }
 
 export default function dailyActivityChart({data}) {
-console.log(data)
+// console.log(data)
   return (
     <div className='barchart'>
     <p className='barchart-title' >Activité quotidienne</p>

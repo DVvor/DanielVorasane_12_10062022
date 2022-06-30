@@ -3,10 +3,10 @@ import './Sidebar.css'
 import React from 'react'
 
 //Icons/////////////////////////////////////////////////
-import strenght from '../../../assets/strength.png'
-import meditation from '../../../assets/meditation.png'
-import swim from '../../../assets/swim.png'
-import cycle from '../../../assets/cycle.png'
+import strenght from '../../../Assets/strength.png'
+import meditation from '../../../Assets/meditation.png'
+import swim from '../../../Assets/swim.png'
+import cycle from '../../../Assets/cycle.png'
 
 
 function Sidebar() { 
