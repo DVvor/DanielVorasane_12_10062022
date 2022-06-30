@@ -3,21 +3,14 @@ import { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom";
 import './Dashboard.css'
 
-//assets
-// import CalorieIcon from '../../assets/calories-icon.svg'
-// import ProteinIcon from '../../assets/protein-icon.svg'
-// import CalorieIcon from '../../assets/calories-icon.svg'
-// import CalorieIcon from '../../assets/calories-icon.svg'
-
 //Components
 import Card from '../../Components/Card-info/Card'
-// import data from '../../datas/data'
 import DailyActivityChart from '../../Components/Charts/DailyActivityChart/DailyActivityChart.jsx'
 import AverageSessionTimeChart from '../../Components/Charts/AverageSessionTimeChart/AverageSessionTimeChart'
 import PerformanceRadarChart from '../../Components/Charts/PerformanceChart/PerformanceChart'
 import ScoreChart from '../../Components/Charts/ScoreChart/ScoreChart'
 
-
+// Datas
 import { getUserInfos, getUserActivities, getUserAverageSessions, getUserPerformance } from "../../Datas/getUserDatas"
 
 
@@ -46,13 +39,11 @@ function Dashboard() {
   useEffect(() => {
     fetchData(id)
   }, [id])
-
-  // console.log(userInfosDatas)
   
 
     const username = userInfosDatas.userInfos?.firstName
 
-    return (
+  return (
   <>
     <div className='dashboard'>
       <div className='dashboard-header'>

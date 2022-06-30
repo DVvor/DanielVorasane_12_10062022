@@ -1,7 +1,7 @@
 import './ErrorPage.css';
 import React from 'react'
 
-
+// Error page
 function ErrorPage() {
     return (
     <>

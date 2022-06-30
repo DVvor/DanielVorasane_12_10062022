@@ -2,83 +2,12 @@ import {React, useEffect, useState} from 'react'
 import { RadarChart, PolarGrid , PolarAngleAxis, Radar, ResponsiveContainer } from 'recharts';
 import './PerformanceChart.css'
 
-// const USER_PERFORMANCE = [
-//   {
-//       userId: 12,
-//       kind: {
-//           1: 'cardio',
-//           2: 'energy',
-//           3: 'endurance',
-//           4: 'strength',
-//           5: 'speed',
-//           6: 'intensity'
-//       },
-//       data: [
-//           {
-//               value: 80,
-//               kind: 1
-//           },
-//           {
-//               value: 120,
-//               kind: 2
-//           },
-//           {
-//               value: 140,
-//               kind: 3
-//           },
-//           {
-//               value: 50,
-//               kind: 4
-//           },
-//           {
-//               value: 200,
-//               kind: 5
-//           },
-//           {
-//               value: 90,
-//               kind: 6
-//           }
-//       ]
-//   },
-//   {
-//       userId: 18,
-//       kind: {
-//           1: 'cardio',
-//           2: 'energy',
-//           3: 'endurance',
-//           4: 'strength',
-//           5: 'speed',
-//           6: 'intensity'
-//       },
-//       data: [
-//           {
-//               value: 200,
-//               kind: 1
-//           },
-//           {
-//               value: 240,
-//               kind: 2
-//           },
-//           {
-//               value: 80,
-//               kind: 3
-//           },
-//           {
-//               value: 80,
-//               kind: 4
-//           },
-//           {
-//               value: 220,
-//               kind: 5
-//           },
-//           {
-//               value: 110,
-//               kind: 6
-//           }
-//       ]
-//   }
-// ]
 
+/**
+ * Create radar chart - show user performance 
+ * @param { Object }  datas - user activities data
+ * @returns { JSX }
+*/
 export default function PerformanceRadarChart({datas}) {
 
     const [datasIsCompleted, setDatasIsCompleted] = useState(false)
@@ -103,7 +32,7 @@ export default function PerformanceRadarChart({datas}) {
         
         const nameTick = datas.kind
         
-        function changeTickName(tickIndex) {
+        function changeTickName(tickIndex) { // change tick name by data kind
             return nameTick[tickIndex]
         }
     
@@ -114,9 +43,7 @@ export default function PerformanceRadarChart({datas}) {
               style={{ backgroundColor: "#282D30", borderRadius: 5 }}
               outerRadius={'70%'}
               margin= {{ top: 5, right: 5, bottom: 5, left: 5 }}
-              data={datas.data}
-              // data={ USER_PERFORMANCE[0].data}
-      
+              data={datas.data}      
               >
               <PolarGrid stroke="white" strokeLinejoin='inner' radialLines={false} />
               <PolarAngleAxis style={{ fontSize: '0.833vw' }} stroke="white" dataKey="kind" tickLine={false} tickFormatter={changeTickName} dy={5} />

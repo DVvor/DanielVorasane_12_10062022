@@ -3,9 +3,15 @@ import { RadialBarChart, RadialBar, PolarAngleAxis, ResponsiveContainer } from '
 import './ScoreChart.css'
 
 
+/**
+ * Create score chart - show user score 
+ * @param { Object }  data - user infos 
+ * @returns { JSX }
+*/
+
 export default function ScoreChart({data}) {
     // console.log(data)
-      const Kpi = data.todayScore * 100  || data.score * 100
+      const Kpi = data.todayScore * 100  || data.score * 100 // score in pourcent
 
       const dataChart = [
         {
@@ -37,6 +43,5 @@ export default function ScoreChart({data}) {
             <p className='score-content'>de votre <br></br> objectif</p>
           </div>
         </div>
-
       )
 }

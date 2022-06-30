@@ -8,6 +8,10 @@ import meditation from '../../../Assets/meditation.png'
 import swim from '../../../Assets/swim.png'
 import cycle from '../../../Assets/cycle.png'
 
+/**
+ * Create a component sidebar
+ * @returns { JSX }
+ */
 
 function Sidebar() { 
   return (

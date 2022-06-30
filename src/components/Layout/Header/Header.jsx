@@ -3,6 +3,10 @@ import React from 'react'
 
 import logo from '../../../Assets/logo.png'
 
+/**
+ * Create a component
+ * @returns { JSX }
+ */
 
 function Header() { 
   return (

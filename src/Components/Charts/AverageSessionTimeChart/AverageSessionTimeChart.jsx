@@ -2,6 +2,9 @@ import React from 'react'
 import { LineChart,Line , XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import './AverageSessionTimeChart.css'
 
+
+
+/*** Tootlip style */
 const styleTooltip = {
   borderRadius: 0,
   backgroundColor: "#FFFFFF",
@@ -16,18 +19,28 @@ const styleTooltip = {
   alignItems: "center",
 }
 
+/**
+ * Change tooltip content
+ * @param { Boolean } active - the state of tooltip
+ * @param { Array.<Object> } payload - Retrieve key value
+*/
+
 const CustomTooltip = ({ active, payload }) => {
   // console.log(payload)
-if (active) {
-  return (
-    <div className="session-tooltip-container">
-              <p className="session-tooltip">{`${payload[0].value} min`}</p>
-        </div>
-  );
+  if (active) {
+    return (
+      <div className="session-tooltip-container">
+                <p className="session-tooltip">{`${payload[0].value} min`}</p>
+          </div>
+    );
+  }
 }
 
-return null;
-}
+/**
+ * Change format date in XAxis
+ * @param { Number } tickIndex - user data
+ * @returns { String } - first day Letter
+*/
 
 function changeTickDay(tickIndex) {
   const dayLetter = {
@@ -41,7 +54,12 @@ function changeTickDay(tickIndex) {
   }
   return dayLetter[tickIndex]
  }
- 
+
+/**
+ * Create a bar chart component
+ * @param { Object } data - user data
+ * @returns { JSX }
+*/
 
   export default function SessionChart({data}) {
   return (

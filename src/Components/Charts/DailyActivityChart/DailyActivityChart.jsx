@@ -3,6 +3,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 
 import './DailyActivityChart.css'
 
+/*** Tootlip style */
 const styleTooltip = {
     backgroundColor: "#E60000",
     height: 70,
@@ -19,6 +20,11 @@ const labelStyle = {
   display: "none"
 }
 
+/**
+ * Change tooltip content
+ * @param { Boolean } active - the state of tooltip
+ * @param { Array.<Object> } payload - Retrieve key value
+*/
 const CustomTooltip = ({ active, payload }) => {
   if (active) {
     return (
@@ -26,15 +32,25 @@ const CustomTooltip = ({ active, payload }) => {
             <p className="weight-tooltip">{`${payload[0].value} kg`}</p>
             <p className="calories-tooltip">{`${payload[1].value} kCal`}</p>
       </div>
-    );
+    )
   }
+}
 
-  return null;
-};
+/**
+ * Change name date - Get day number
+ * @param { String } dayValue - value of date
+ * @return { Number } 
+*/
 
 function getNumberDay(dayValue) {
   return new Date(dayValue).getDate() //  - type date - To get day number
 }
+
+/**
+ * Create chart activity
+ * @param { Object }  data - user activities data
+ * @returns { JSX }
+*/
 
 export default function dailyActivityChart({data}) {
 // console.log(data)

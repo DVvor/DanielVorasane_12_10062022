@@ -5,6 +5,10 @@ import './Layout.css'
 
 import { Outlet } from 'react-router-dom'
 
+/**
+ * Create a layout with principal component
+ * @returns { JSX }
+*/
 
 function Layout() {
   
