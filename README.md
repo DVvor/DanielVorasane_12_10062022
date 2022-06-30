@@ -1,5 +1,21 @@
-# Getting Started with Create React App
+![logo-du-projet](https://github.com/DVvor/DanielVorasane_12_10062022/blob/master/src/Assets/logo.png)
 
+
+
+L’ensemble de ta documentation doit être réalisée en anglais.
+Le fichier README ne doit comporter que les étapes d’installation ainsi que les prérequis du projet. Dans ce fichier, tu devras dire comment installer et lancer le projet.
+Ton projet va utiliser React et tu vas forcément créer des components. Il est donc important que tu intègres des Proptypes pour chacun de tes components. 
+Dernier point, la JsDoc. En dehors des méthodes de cycle de vie (componentDidMount par exemple), il est important que ton projet ait des fonctions et méthodes documentées. 
+
+Etape d'installation
+
+Prerequisites
+Installation
+Configuration
+Documents
+# Project Sportsee
+Built a React project with external datas from API 
+# Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

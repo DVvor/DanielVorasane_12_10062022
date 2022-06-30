@@ -1,14 +1,17 @@
 import {React, useEffect, useState} from 'react'
-
 import './Card.css'
 
+// icon card
 import CalorieIcon from '../../Assets/calories-icon.svg'
 import ProteinIcon from '../../Assets/protein-icon.svg'
 import CarbsIcon from '../../Assets/carbs-icon.svg'
 import FatIcon from '../../Assets/fat-icon.svg'
 
-// import data from "../../datas/data"
-
+/**
+ * Create card info with keys infos
+ * @param { String } type - the state of tooltip
+ * @param { Object } data - user datas
+*/
 
 function Card({type, data}) {
 
