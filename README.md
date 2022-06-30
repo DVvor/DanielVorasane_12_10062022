@@ -1,4 +1,4 @@
-![logo-du-projet](https://raw.githubusercontent.com/DVvor/DanielVorasane_12_10062022/blob/master/src/Assets/logo.png)
+![logo-du-projet](https://github.com/DVvor/DanielVorasane_12_10062022/blob/master/src/assets/logo.png)
 
 
 L’ensemble de ta documentation doit être réalisée en anglais.
