@@ -21,14 +21,14 @@ export default function ScoreChart({data}) {
             innerRadius="70%" 
             outerRadius="80%" 
             data={dataChart} 
-            startAngle={220} 
-            endAngle={80}
+            startAngle={-180} 
+            endAngle={-540}
             style={{ backgroundColor: "#fbfbfb", borderRadius: 5 }}
           
           >
-          <PolarAngleAxis type="number" domain={[0, 0]} tick={false} />
+          <PolarAngleAxis type="number" domain={[0, 100]} tick={false}/>
           
-          <RadialBar cornerRadius={15} background clockWise={false} dataKey="value" />
+          <RadialBar cornerRadius={15} clockWise={false} dataKey="value" background={false} />
           </RadialBarChart>
           </ResponsiveContainer>
          <div className='scorechart-title'> {dataChart[0].name} </div>

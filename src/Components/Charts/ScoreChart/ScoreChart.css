@@ -9,9 +9,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
-  height: 63%;
-  width: 52%;
+  /* background-color: red; */
+  height: 65%;
+  width: 65%;
   border-radius: 100%;
   text-align: center;
 
