@@ -2,6 +2,8 @@
   /* background-color: aliceblue; */
   width: 31%;
   position: relative;
+  background-color: #fbfbfb;
+  border-radius: 5px;
 }
 
 .score {
@@ -9,10 +11,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* background-color: red; */
-  height: 65%;
-  width: 65%;
   border-radius: 100%;
+  /* background-color: white; */
+  /* height: 65%;
+  width: 65%; */
+  /* min-height: 170px;
+  min-width: 170px; */
   text-align: center;
 
   display: flex;
@@ -20,6 +24,8 @@
   align-items: center;
   flex-direction: column;
 }
+
+
 
 .score-pourcent {
   margin: 0;
@@ -44,5 +50,4 @@
   position: absolute;
   top: 10%;
   left: 10%;
-
 }

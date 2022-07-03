@@ -26,8 +26,10 @@
 }
 
 .dashboard-header {
+  width: 100%;
   height: 20%;
   /* background-color: aqua; */
+
 }
 
 .dashboard-content {

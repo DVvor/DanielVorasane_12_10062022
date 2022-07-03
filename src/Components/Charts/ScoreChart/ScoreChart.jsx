@@ -1,5 +1,7 @@
 import {React} from 'react'
-import { RadialBarChart, RadialBar, PolarAngleAxis, ResponsiveContainer } from 'recharts';
+// import { RadialBarChart, RadialBar, PolarAngleAxis, ResponsiveContainer } from 'recharts';
+import { Pie, PieChart,Cell, ResponsiveContainer } from 'recharts';
+
 import './ScoreChart.css'
 
 
@@ -10,38 +12,37 @@ import './ScoreChart.css'
 */
 
 export default function ScoreChart({data}) {
-    // console.log(data)
-      const Kpi = data.todayScore * 100  || data.score * 100 // score in pourcent
+  // console.log(data)
+  const Kpi = data.todayScore * 100  || data.score * 100 // score in pourcent
 
-      const dataChart = [
-        {
-          "name": "Score",
-          "value":Kpi,
-          "fill": "red"
-        }]
+  const dataChart = [
+    { name: 'Score', value: Kpi },
+    { value: 100 - Kpi },
+  ];
+  const center = [
+    { name: 'center', value: 100 },
+  ];
 
-      return (
-        <div className='scorechart'>
-          <ResponsiveContainer width="100%" height={300} background="grey">
-          <RadialBarChart 
-            innerRadius="70%" 
-            outerRadius="80%" 
-            data={dataChart} 
-            startAngle={-180} 
-            endAngle={-540}
-            style={{ backgroundColor: "#fbfbfb", borderRadius: 5 }}
-          
-          >
-          <PolarAngleAxis type="number" domain={[0, 100]} tick={false}/>
-          
-          <RadialBar cornerRadius={15} clockWise={false} dataKey="value" background={false} />
-          </RadialBarChart>
-          </ResponsiveContainer>
-         <div className='scorechart-title'> {dataChart[0].name} </div>
-          <div className='score'>
-            <p className='score-pourcent'>{Kpi}%</p>
-            <p className='score-content'>de votre <br></br> objectif</p>
-          </div>
-        </div>
-      )
+  return (
+    <div className='scorechart'>
+      <ResponsiveContainer width="100%" height="100%" background="grey" className="radialChart">
+      <PieChart>
+      <Pie data={dataChart} dataKey="value" innerRadius={90} outerRadius={105} startAngle={70} endAngle={430}>
+            {dataChart.map((entry, index) => (
+                index === 0 
+                  ?  <Cell key={`cell-${index}`} cornerRadius={15} fill="red"/>
+                  :  <Cell key={`cell-${index}`} fill="transparent"/>
+            ))}
+      </Pie>
+      <Pie data={center} fill="white" dataKey="value" innerRadius={0} outerRadius={90}></Pie>
+
+  </PieChart>
+      </ResponsiveContainer>
+      <div className='scorechart-title'> {dataChart[0].name} </div>
+      <div className='score'>
+        <p className='score-pourcent'>{Kpi}%</p>
+        <p className='score-content'>de votre <br></br> objectif</p>
+      </div>
+    </div>
+  )
 }

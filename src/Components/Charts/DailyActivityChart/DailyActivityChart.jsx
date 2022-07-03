@@ -1,5 +1,6 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Area, } from 'recharts';
+import PropTypes from 'prop-types';
 
 import './DailyActivityChart.css'
 
@@ -25,6 +26,7 @@ const labelStyle = {
  * @param { Boolean } active - the state of tooltip
  * @param { Array.<Object> } payload - Retrieve key value
 */
+
 const CustomTooltip = ({ active, payload }) => {
   if (active) {
     return (
@@ -53,7 +55,6 @@ function getNumberDay(dayValue) {
 */
 
 export default function dailyActivityChart({data}) {
-// console.log(data)
   return (
     <div className='barchart'>
     <p className='barchart-title' >Activité quotidienne</p>
@@ -84,3 +85,14 @@ export default function dailyActivityChart({data}) {
     </div>
   )
 }
+
+
+dailyActivityChart.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({ // shape allows to check object content type
+      calories: PropTypes.number.isRequired,
+      day: PropTypes.string.isRequired,
+      kilogram: PropTypes.number.isRequired,
+    }))
+}
+

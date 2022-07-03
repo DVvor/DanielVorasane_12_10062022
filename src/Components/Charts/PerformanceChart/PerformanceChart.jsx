@@ -1,15 +1,16 @@
 import {React, useEffect, useState} from 'react'
 import { RadarChart, PolarGrid , PolarAngleAxis, Radar, ResponsiveContainer } from 'recharts';
 import './PerformanceChart.css'
+import PropTypes from 'prop-types';
 
 
 /**
  * Create radar chart - show user performance 
- * @param { Object }  datas - user activities data
+ * @param { object }  datas - user activities data
  * @returns { JSX }
 */
 export default function PerformanceRadarChart({datas}) {
-
+console.log(typeof datas)
     const [datasIsCompleted, setDatasIsCompleted] = useState(false)
 
     function checkData() {
@@ -55,4 +56,6 @@ export default function PerformanceRadarChart({datas}) {
     }
 }
 
-
+PerformanceRadarChart.propTypes = {
+    datas: PropTypes.object
+}

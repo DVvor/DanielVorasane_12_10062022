@@ -8,13 +8,15 @@ Built a React project with external datas from a API
 ### Technologies and Dependencies
 -   Javascript
 -   CSS
+-   Visual Studio code
 -   [Npm](https://www.npmjs.com/package/npm) (v8.1.0) 
--   [NodeJS](https://nodejs.org/en/) (v2.0.4)
+-   [NodeJS](https://nodejs.org/en/) (v16.13.0)
 -   [React](https://fr.reactjs.org/) (v18.1.0)
 -   [Create React App](https://github.com/facebook/create-react-app)
 -   [React-router-dom](https://reactrouter.com/) (v6.3.0)
 -   [Recharts](https://recharts.org/en-US/) (v2.1.10)
 -   [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+-   [Prop-types](https://www.npmjs.com/package/prop-types)
 
 
 

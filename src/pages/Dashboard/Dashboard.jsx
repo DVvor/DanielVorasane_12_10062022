@@ -10,17 +10,19 @@ import AverageSessionTimeChart from '../../Components/Charts/AverageSessionTimeC
 import PerformanceRadarChart from '../../Components/Charts/PerformanceChart/PerformanceChart'
 import ScoreChart from '../../Components/Charts/ScoreChart/ScoreChart'
 
-// Datas
+// Data API
 import { getUserInfos, getUserActivities, getUserAverageSessions, getUserPerformance } from "../../Datas/getUserDatas"
 
+// Data mocked
+// import { getUserInfos, getUserActivities, getUserAverageSessions, getUserPerformance } from "../../Datas/getUserDatasMocked"
 
 function Dashboard() {
   const { id } = useParams(); // get current page ID
 
   const [userInfosDatas, setUserInfosDatas] = useState([])
-  const [userActivitiesDatas, setUserActivitiesDatas] = useState({});
+  const [userActivitiesDatas, setUserActivitiesDatas] = useState([]);
   const [userSessionsDatas, setUserSessionsDatas] = useState();
-  const [userPerformanceDatas, setUserPerformanceDatas] = useState([]);
+  const [userPerformanceDatas, setUserPerformanceDatas] = useState({});
     
   async function fetchData(userId) {
     const userInfosResult = await getUserInfos(userId)
@@ -40,10 +42,9 @@ function Dashboard() {
     fetchData(id)
   }, [id])
   
-
     const username = userInfosDatas.userInfos?.firstName
 
-  return (
+    return (
   <>
     <div className='dashboard'>
       <div className='dashboard-header'>
@@ -71,5 +72,5 @@ function Dashboard() {
 
 }
 
-export default Dashboard
 
+export default Dashboard

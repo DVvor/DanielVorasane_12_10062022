@@ -1,21 +1,22 @@
-
 // Get user Informations includes: 
 // the user id, 
 // user information (first name, last name and age), 
 // the current day's score (todayScore) and key data (calorie, macronutrient, etc.)
+
 async function getUserInfos(userId) {
-  const data = await fetch(`http://localhost:3000/user/${userId}`)
-    .then(function (result) {
-      if (result.ok) {
-        return result.json()
-      }
-    })
-    .catch(function (error) {
-      console.log(error)
-    })
-      // console.log(data.data)
+  const data = await fetch(`http://localhost:3000/user/${userId}`) 
+  .then(function (result) {
+    if (result.ok) {
+      return result.json()
+    }
+  })
+  .catch(function (error) {
+    console.log(error)
+  })
+  // console.log(data.data)
   return (data.data)
 }
+
 // Get user Actvities (Kilograms and calories lost per day)
 async function getUserActivities(userId) {
   const data = await fetch(`http://localhost:3000/user/${userId}/activity`)
@@ -61,4 +62,4 @@ async function getUserPerformance(userId) {
   return (data.data)
 }
 
-export { getUserInfos , getUserActivities, getUserAverageSessions, getUserPerformance} ;
+export { getUserInfos, getUserActivities, getUserAverageSessions, getUserPerformance} ;
