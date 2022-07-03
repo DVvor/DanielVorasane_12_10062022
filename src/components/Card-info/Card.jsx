@@ -1,6 +1,7 @@
 import {React, useEffect, useState} from 'react'
 import './Card.css'
-
+import PropTypes from 'prop-types'; 
+ 
 // icon card
 import CalorieIcon from '../../Assets/calories-icon.svg'
 import ProteinIcon from '../../Assets/protein-icon.svg'
@@ -76,3 +77,14 @@ function Card({type, data}) {
     );
 }
 export default Card;
+
+
+Card.propTypes = {
+  type: PropTypes.string.isRequired,
+  data: PropTypes.shape({ // shape allows to check object content type
+      calorieCount: PropTypes.number.isRequired,
+      proteinCount: PropTypes.number.isRequired,
+      carbohydrateCount: PropTypes.number.isRequired,
+      lipidCount: PropTypes.number.isRequired,
+  })
+}

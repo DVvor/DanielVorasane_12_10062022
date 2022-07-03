@@ -10,7 +10,6 @@ import PropTypes from 'prop-types';
  * @returns { JSX }
 */
 export default function PerformanceRadarChart({datas}) {
-console.log(typeof datas)
     const [datasIsCompleted, setDatasIsCompleted] = useState(false)
 
     function checkData() {

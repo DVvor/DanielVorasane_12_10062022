@@ -1,6 +1,7 @@
 import React from 'react'
 import { LineChart,Line , XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import './AverageSessionTimeChart.css'
+import PropTypes from 'prop-types';
 
 
 
@@ -82,4 +83,12 @@ function changeTickDay(tickIndex) {
       </ResponsiveContainer>
     </div>
   )
+}
+
+SessionChart.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({ // shape allows to check object content type
+      day: PropTypes.number.isRequired,
+      sessionLength: PropTypes.number.isRequired,
+  }))
 }

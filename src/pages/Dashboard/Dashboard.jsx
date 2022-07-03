@@ -19,7 +19,7 @@ import { getUserInfos, getUserActivities, getUserAverageSessions, getUserPerform
 function Dashboard() {
   const { id } = useParams(); // get current page ID
 
-  const [userInfosDatas, setUserInfosDatas] = useState([])
+  const [userInfosDatas, setUserInfosDatas] = useState({})
   const [userActivitiesDatas, setUserActivitiesDatas] = useState([]);
   const [userSessionsDatas, setUserSessionsDatas] = useState();
   const [userPerformanceDatas, setUserPerformanceDatas] = useState({});

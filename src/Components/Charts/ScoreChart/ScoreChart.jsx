@@ -1,7 +1,7 @@
 import {React} from 'react'
 // import { RadialBarChart, RadialBar, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 import { Pie, PieChart,Cell, ResponsiveContainer } from 'recharts';
-
+import PropTypes from 'prop-types'; 
 import './ScoreChart.css'
 
 
@@ -12,7 +12,6 @@ import './ScoreChart.css'
 */
 
 export default function ScoreChart({data}) {
-  // console.log(data)
   const Kpi = data.todayScore * 100  || data.score * 100 // score in pourcent
 
   const dataChart = [
@@ -45,4 +44,9 @@ export default function ScoreChart({data}) {
       </div>
     </div>
   )
+}
+
+
+ScoreChart.propTypes = {
+  data: PropTypes.object
 }
