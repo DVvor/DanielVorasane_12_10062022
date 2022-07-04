@@ -10,8 +10,9 @@ import FatIcon from '../../Assets/fat-icon.svg'
 
 /**
  * Create card info with keys infos
- * @param { String } type - the state of tooltip
+ * @param { String } type - the type of nutrient
  * @param { Object } data - user datas
+ * @return { JSX }
 */
 
 function Card({type, data}) {

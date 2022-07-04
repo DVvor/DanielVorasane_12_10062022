@@ -1,6 +1,12 @@
 import './ErrorPage.css';
 import React from 'react'
 
+
+/**
+ * Create a component
+ * @returns { JSX }
+ */
+
 // Error page
 function ErrorPage() {
     return (

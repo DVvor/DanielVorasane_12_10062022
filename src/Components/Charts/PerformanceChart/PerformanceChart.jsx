@@ -32,6 +32,12 @@ export default function PerformanceRadarChart({datas}) {
         
         const nameTick = datas.kind
         
+        /**
+        * Format tooltip content
+        * @param { Number } tickIndex 
+        * @returns { String }
+        */
+        
         function changeTickName(tickIndex) { // change tick name by data kind
             return nameTick[tickIndex]
         }

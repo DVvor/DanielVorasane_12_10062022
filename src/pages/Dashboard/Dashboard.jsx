@@ -16,6 +16,11 @@ import { getUserInfos, getUserActivities, getUserAverageSessions, getUserPerform
 // Data mocked
 // import { getUserInfos, getUserActivities, getUserAverageSessions, getUserPerformance } from "../../Datas/getUserDatasMocked"
 
+/**
+ * Create a component
+ * @returns { JSX }
+ */
+
 function Dashboard() {
   const { id } = useParams(); // get current page ID
 
