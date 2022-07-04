@@ -25,7 +25,7 @@ import { getUserInfos, getUserActivities, getUserAverageSessions, getUserPerform
 function Dashboard() {
   const { id } = useParams(); // get current page ID
 
-  const [error, setError] = useState(null);
+  const [error, setError] = useState();
   const [dataIsLoaded, setdataIsLoaded] = useState(false);
 
   const [userInfosDatas, setUserInfosDatas] = useState({})
@@ -33,9 +33,7 @@ function Dashboard() {
   const [userSessionsDatas, setUserSessionsDatas] = useState();
   const [userPerformanceDatas, setUserPerformanceDatas] = useState({});
 
-
   async function fetchData(userId) {
-    setdataIsLoaded(false)
     try {
       const userInfosResult = await getUserInfos(userId)
       setUserInfosDatas(userInfosResult)
@@ -48,13 +46,35 @@ function Dashboard() {
   
       const userPerformanceResult = await getUserPerformance(userId)
       setUserPerformanceDatas(userPerformanceResult)
-    }
-    catch (error) {
-      console.log(error)
-      setError(true)
-    }
-    finally {
+      
+      if (userInfosResult === "Error: no data found" || 
+      userActivitiesResult === "Error: no data found" || 
+      userSessionsResult === "Error: no data found" || 
+      userPerformanceResult === "Error: no data found") {
+        throw new Error("error")
+      }
+
+      // if (userInfosResult === "Error: no data found") {
+      //   throw new Error()
+      // }
+
+      // if (userActivitiesResult === "Error: no data found") {
+      //   throw new Error()
+      // }
+
+      // if (userSessionsResult === "Error: no data found") {
+      //   throw new Error()
+      // }
+
+      // if (userPerformanceResult === "Error: no data found") {
+      //   throw new Error()
+      // }
+
       setdataIsLoaded(true)
+    } 
+    catch (error) {
+      // console.log(error)
+      setError(true)
     }
   }
 
@@ -62,7 +82,7 @@ function Dashboard() {
     fetchData(id)
   }, [id])
   
-    const username = userInfosDatas.userInfos?.firstName
+    const username = userInfosDatas?.userInfos?.firstName
 
 
   // if data not found, display component error page
