@@ -54,22 +54,6 @@ function Dashboard() {
         throw new Error("error")
       }
 
-      // if (userInfosResult === "Error: no data found") {
-      //   throw new Error()
-      // }
-
-      // if (userActivitiesResult === "Error: no data found") {
-      //   throw new Error()
-      // }
-
-      // if (userSessionsResult === "Error: no data found") {
-      //   throw new Error()
-      // }
-
-      // if (userPerformanceResult === "Error: no data found") {
-      //   throw new Error()
-      // }
-
       setdataIsLoaded(true)
     } 
     catch (error) {

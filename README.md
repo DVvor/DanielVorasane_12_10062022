@@ -52,13 +52,13 @@ With the terminal, launch Front-End on port 3001:
 
 `npm start`
 
-Front-End is now rendered at URL `http://localhost:3001`
+Front-End is now rendered at URL `http://localhost:3000`
 
 We have 2 users available. You can change the user on url or use this different link:
 
-`http://localhost:3003/user/12` 
+`http://localhost:3001/user/12` 
 or
-`http://localhost:3003/user/18`
+`http://localhost:3001/user/18`
 
 
 # Author

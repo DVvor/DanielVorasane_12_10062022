@@ -33,7 +33,7 @@ export default function ScoreChart({data}) {
                   :  <Cell key={`cell-${index}`} fill="transparent"/>
             ))}
       </Pie>
-      <Pie data={center} fill="white" dataKey="value" innerRadius={0} outerRadius={90}></Pie>
+      <Pie data={center} fill="white" dataKey="value" innerRadius={0} outerRadius={90} animationDuration={0}></Pie>
 
   </PieChart>
       </ResponsiveContainer>
